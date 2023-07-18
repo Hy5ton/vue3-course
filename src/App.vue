@@ -11,8 +11,11 @@
                 v-model="searchQuery"
                 placeholder="🔍Search artwork"
                 />
-                <img class="image--navbar" src="../src/components/imageNavbar/email.png"/>
-                <img class="image--navbar" src="../src/components/imageNavbar/moneybag.png"/>
+                <img class="image--navbar" src="../src/components/imageNavbar/email.svg"/>
+                <img class="image--navbar" src="../src/components/imageNavbar/sqrt.svg"/>
+                <img class="image--navbar" src="../src/components/imageNavbar/moneybag.svg"/>
+                <img class="image--navbar" src="../src/components/imageNavbar/bg.png"/>
+                <a class="username--navbar">Leslie Alexandre</a> 
             </ul>
         </nav>
         <div class="sidenav">
@@ -112,13 +115,14 @@ export default{
 
 <style>
 * {
-    background: rgb(62, 72, 83);
+    background: #2B2C33;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
 .app{
+    font-family: Oswald;
     margin: 0;
     padding: 0;
 }
@@ -136,12 +140,12 @@ export default{
     padding: 10px 15px;
     border-radius: 15px;
     color: black;
-    border: 1px solid gray;
-    background: rgb(101, 189, 101);
+    border: 1px solid #383940;
+    background: var(--green, #38F2AF);;
     margin-top: 80px;
-    font-size:20px;
+    font-size:25px;
     font-weight: 700;
-    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-family: Oswald;
 }
 .textLabel{
     position: absolute; 
@@ -153,20 +157,33 @@ export default{
 .searchLine{
     position: relative;
     max-width: 420px;
-    background: #2e3741;
+    background: #373943;
     color: white;
-    left: 350px;
+    left: 330px;
     border-radius: 10px;
     top: -25px;
 }
 .image--navbar{
-    background: #2e3741;
+    background: #373943;
+    border-radius: 25px;
     position: relative;
     color: white;
-    left: 450px;
+    left: 380px;
     top: -10px;
     height: 40px; 
     width: 40px; 
+    margin-right: 20px;
+}
+.username--navbar{
+    font-family: Oswald;
+    font-size: 22px;
+    background: #25272E;
+    position: relative;
+    color: white;
+    left: 370px;
+    top: -20px;
+    height: 40px; 
+    width: 100px; 
     margin-right: 20px;
 }
 .navbar{
@@ -174,27 +191,27 @@ export default{
     top: 0;
     left: 0;
     right: 0;
-    z-index: 9999;
+    z-index: 5;
     border-style: solid;
     border-width: 1px;
-    border-color: gray;
+    border-color: #383940;
     margin: 0;
-    color: #2e3741;
-    background-color: #2e3741;
+    color: #25272E;
+    background-color: #25272E;
 }
 .navbar-loc{
     list-style: none; 
     margin: 0; 
     padding-left: 0; 
     margin-top:25px; 
-    color: #2e3741;
-    background-color: #2e3741;
+    color: #25272E;
+    background-color: #25272E;
 }
 .first--top--btns{
     float:left; 
     margin-right:40px; 
     padding-left: 160px;
-    background-color: #2e3741;
+    background-color: #25272E;
 }
 .first--top--btns--styles{
     text-decoration: none;
@@ -203,17 +220,17 @@ export default{
     text-decoration:none; 
     display: inline-block; 
     color:white;
-    background-color: #2e3741;
+    background-color: #25272E;
 }
 .top--btns{
     float:left; 
     margin-right:40px; 
-    background-color: #2e3741;
+    background-color: #25272E;
 }
 .mintify--btns{
     float:left; 
     margin-right:40px; 
-    background-color: #2e3741;
+    background-color: #25272E;
 }
 .mintify--btns--styles{
     text-decoration: none;
@@ -221,8 +238,8 @@ export default{
     margin-left: 15px;
     text-decoration:none; 
     display: inline-block; 
-    color:rgb(101, 189, 101);
-    background-color: #2e3741;
+    color:var(--green, #38F2AF);;
+    background-color: #25272E;
 }
 .top--btns--styles{
     text-decoration: none;
@@ -231,18 +248,18 @@ export default{
     text-decoration:none; 
     display: inline-block; 
     color:white;
-    background-color: #2e3741;
+    background-color: #25272E;
 }
 .top--btns--styles:after {
     display: block; 
     content: ""; 
     height: 3px; 
     width: 0%; 
-    color:rgb(101, 189, 101);
-    background-color: rgb(101, 189, 101); 
+    color:var(--green, #38F2AF);
+    background-color: var(--green, #38F2AF); 
 }
 .top--btns--styles:hover{
-    color:rgb(101, 189, 101);
+    color:var(--green, #38F2AF);
 }
 .top--btns--styles:hover:after,
 .top--btns--styles:focus:after {
@@ -251,14 +268,14 @@ export default{
 .sidenav {
     border-style: solid;
     border-width: 1px;
-    border-color: gray;
-    border-top: #2e3741;
+    border-color: #383940;
+    border-top: #25272E;
     height: 100%; 
     width: 260px; 
     position: fixed; 
     z-index: 1;
     left: 0;
-    background-color: #2e3741; 
+    background-color: #25272E; 
     overflow-x: hidden; 
     padding-top: 72px;
 }
@@ -268,17 +285,17 @@ export default{
     text-decoration: none;
     font-size: 20px;
     color: white;
-    background-color: #2e3741;
+    background-color: #25272E;
     display: block;
     border-style: solid;
     border-width: 1px;
-    border-color: gray;
+    border-color: #383940;
     border-top: #2e3741;
     border-left: #2e3741;
     border-right: #2e3741;
 }
 .sidenav a:hover {
-    color: rgb(101, 189, 101);
+    color: var(--green, #38F2AF);
 }
 .main {
     margin-left: 160px; 
@@ -292,7 +309,7 @@ export default{
     font-size:20px;
     color:white;
     border-radius: 15px;
-    background: #4e565f;
+    background: #373943;
     margin: 50px 290px;
     margin-top: 120px;
     width: 1545px;

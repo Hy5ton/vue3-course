@@ -13,7 +13,7 @@ export default {
 
 <style scoped>
 .btn{
-    border: 1px solid #4e565f;
+    border: 1px solid #373943;
     width: 182px;
     height: 60px;
     font-size: 20px;

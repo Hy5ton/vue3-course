@@ -55,7 +55,7 @@ export default {
 .pricePost{
     border-style: solid;
     border-width: 2px;
-    border-color: rgb(101, 189, 101);
+    border-color: var(--green, #38F2AF);;
     border-radius: 25px;
     text-align: center;
     line-height:  40px;
@@ -63,6 +63,7 @@ export default {
     height: 40px;
     margin-bottom: 20px;
     position: relative;
+    z-index: 1;
     left: 190px;
     top: 120px;
 }
@@ -72,6 +73,6 @@ export default {
     margin-top: 70px;
 }
 .type--delete--btns--style{
-    color:rgb(101, 189, 101);
+    color:var(--green, #38F2AF);;
 }
 </style>

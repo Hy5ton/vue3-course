@@ -62,6 +62,8 @@ export default {
 
 <style scoped>
 form{
+    position: relative;
+    z-index: 9999;
     font-size:20px;
     font-weight: 700;
     color: white;

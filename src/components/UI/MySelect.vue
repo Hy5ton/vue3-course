@@ -1,6 +1,6 @@
 <template>
     <select class="my--select" :value="modelValue" @change="changeOption">
-        <option disabled value="">Sorting</option>
+        <option value="">Sorting</option>
         <option 
             v-for="option in options" 
             :key="option.value" 
@@ -33,13 +33,13 @@ export default {
 
 <style scoped>
 .my--select{
-    color: rgb(101, 189, 101);
+    color: var(--green, #38F2AF);
     border-radius: 10px;
     position: absolute; 
     top: 220px;  
     left: 300px;
     height: 50px;
     width: 150px;
-    background: #4e565f;
+    background: #373943;
 }
 </style>

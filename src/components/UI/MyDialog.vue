@@ -26,6 +26,8 @@ export default {
 
 <style scoped>
 .dialog {
+    position: relative;
+    z-index: 9995;
     top: 0;
     bottom: 0;
     right: 0;
@@ -38,7 +40,7 @@ export default {
 .dialog__content {
     margin: auto;
     border-radius: 12px;
-    min-height: 50px;
+    min-height: 450px;
     min-width: 300px;
     padding: 20px;
 }
