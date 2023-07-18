@@ -4,11 +4,12 @@
             <div class="imagePost"><img :src="post.src"></div>
             <div class="titlePost"><strong> </strong> {{ post.title }}</div>
             <div class="descriptionPost"><strong> </strong> {{ post.body }}</div>
+            <div class="pricePost" >{{ post.price }}</div>
         </div>
         <div class="post_btns">
-            <my-button
+            <my-button class="type--delete--btns--style"
             @click="$emit('remove', post)"
-            >Delete
+            >{{post.type}}
         </my-button>
         </div>  
 </div>
@@ -50,5 +51,27 @@ export default {
     margin-top: 10px;
     color: gray;
     margin-bottom: 10px;
+}
+.pricePost{
+    border-style: solid;
+    border-width: 2px;
+    border-color: rgb(101, 189, 101);
+    border-radius: 25px;
+    text-align: center;
+    line-height:  40px;
+    width: 132px;
+    height: 40px;
+    margin-bottom: 20px;
+    position: relative;
+    left: 190px;
+    top: 120px;
+}
+.post_btns{
+    width: 132px;
+    height: 40px;
+    margin-top: 70px;
+}
+.type--delete--btns--style{
+    color:rgb(101, 189, 101);
 }
 </style>

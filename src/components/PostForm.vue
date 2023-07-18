@@ -11,6 +11,21 @@
             type="text" 
             placeholder="Description item"
             />
+            <my-input
+            v-model="post.type"
+            type="text"
+            placeholder="Type item"
+            />
+            <my-input
+            v-model="post.price"
+            type="text"
+            placeholder="Price item"
+            />
+            <my-input
+            v-model="post.src"
+            type="text"
+            placeholder="Link to image"
+            />
             <my-button 
             style="align-self: flex-end; margin-top: 15px" 
             @click="createPost"> 
@@ -20,8 +35,10 @@
 </template>
 
 <script>
+import MyInput from './UI/MyInput.vue';
 
 export default {
+  components: { MyInput },
     data() {
         return {
             post: {

@@ -10,9 +10,9 @@
         </transition-group>
         
     </div>
-    <h2 v-else style="color: red">
+    <h1 v-else style="color: rgb(101, 189, 101)">
         Items empty
-    </h2>
+    </h1>
 </template>
 
 <script>

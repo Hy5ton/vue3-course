@@ -13,10 +13,9 @@ export default {
 
 <style scoped>
 .btn{
-    padding: 10px 15px;
-    background: rgb(101, 189, 101);
-    color: black;
-    border: 1px solid gray;
-    border-radius: 15px;
+    border: 1px solid #4e565f;
+    width: 182px;
+    height: 60px;
+    font-size: 20px;
 }
 </style>

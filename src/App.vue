@@ -31,7 +31,7 @@
             >
                 Create new item
             </my-button>
-            <my-select
+            <my-select class="sort--style"
                 v-model="selectedSort"
                 :options="sortOptions"
             />
@@ -65,14 +65,14 @@ export default{
     data() {
         return{
             posts: [
-                {id: 1, title: 'The Holy Grail', body: 'Pixart Motion', src:"imageList/1.png"},
-                {id: 2, title: 'Mirror Glass Efect', body: 'Pixart Motion', src:"imageList/2.png"},
-                {id: 3, title: 'Neon in Life', body: 'Pixart Motion', src:"imageList/3.png"},
-                {id: 4, title: 'Oil Source', body: 'Pixart Motion', src:"imageList/4.png"},
-                {id: 5, title: 'World Surface', body: 'Pixart Motion', src:"imageList/5.png"},
-                {id: 6, title: 'Infinity Door', body: 'Pixart Motion', src:"imageList/6.png"},
-                {id: 7, title: 'Bi-conditional Effect', body: 'Pixart Motion', src:"imageList/7.png"},
-                {id: 8, title: 'Motion view', body: 'Pixart Motion', src:"imageList/8.png"}
+                {id: 1, title: 'The Holy Grail', body: 'Pixart Motion', type: 'Fixed price', price: '0.001 ETH', src:"imageList/1.png"},
+                {id: 2, title: 'Mirror Glass Efect', body: 'Pixart Motion', type: 'Open bidding', price: '0.005 ETH', src:"imageList/2.png"},
+                {id: 3, title: 'Neon in Life', body: 'Pixart Motion', type: 'Fixed price', price: '0.002 ETH', src:"imageList/3.png"},
+                {id: 4, title: 'Oil Source', body: 'Pixart Motion', type: 'Fixed price', price: '0.001 ETH', src:"imageList/4.png"},
+                {id: 5, title: 'World Surface', body: 'Pixart Motion', type: 'Open bidding', price: '0.004 ETH', src:"imageList/5.png"},
+                {id: 6, title: 'Infinity Door', body: 'Pixart Motion', type: 'Fixed price', price: '0.005 ETH', src:"imageList/6.png"},
+                {id: 7, title: 'Bi-conditional Effect', body: 'Pixart Motion', type: 'Fixed price', price: '0.002 ETH', src:"imageList/7.png"},
+                {id: 8, title: 'Motion view', body: 'Pixart Motion', type: 'Open bidding', price: '0.009 ETH', src:"imageList/8.png"}
             ],
             dialogVisible: false,
             modificatorValue: '',
@@ -81,6 +81,8 @@ export default{
             sortOptions: [
                 {value: 'title', name: 'Name' },
                 {value: 'body', name: 'Description' },
+                {value: 'type', name: 'Type' },
+                {value: 'price', name: 'Price'}
             ]
         }
     },
@@ -127,16 +129,24 @@ export default{
     height: 150px;
     width: 350px;
 }
+.sort--style{
+    font-size: 20px;
+}
 .create__btn{
-    margin-top: 100px;
+    padding: 10px 15px;
+    border-radius: 15px;
+    color: black;
+    border: 1px solid gray;
+    background: rgb(101, 189, 101);
+    margin-top: 80px;
     font-size:20px;
     font-weight: 700;
     font-family: Georgia, 'Times New Roman', Times, serif;
 }
 .textLabel{
-    /* text-align:center; */
     position: absolute; 
-    top: 150px; 
+    font-size: 50px;
+    top: 130px; 
     left: 300px; 
     color: white;
 }
