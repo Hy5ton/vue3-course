@@ -1,29 +1,47 @@
 <template>
-    <div class="post">
-        <div>
-            <div class="imagePost"><img :src="post.src"></div>
-            <div class="titlePost"><strong> </strong> {{ post.title }}</div>
-            <div class="descriptionPost"><strong> </strong> {{ post.body }}</div>
-            <div class="pricePost" >{{ post.price }}</div>
-        </div>
-        <div class="post_btns">
-            <my-button class="type--delete--btns--style"
-            @click="$emit('remove', post)"
-            >{{post.type}}
+<div class="post"
+@click="showPost()">
+    <div>
+        <div class="imagePost"><img :src="post.src"></div>
+        <div class="titlePost"><strong> </strong> {{ post.title }}</div>
+        <div class="descriptionPost"><strong> </strong> {{ post.body }}</div>
+        <div class="pricePost" 
+        @click="showDialog">{{ post.price }}</div>
+    </div>
+    <div class="post_btns">
+        <my-button class="type--delete--btns--style"
+        @click="$emit('remove', post)"
+        >{{post.type}}
         </my-button>
-        </div>  
+    </div>  
 </div>
+<item-dialog @hideDialog="showPostFlag=false" v-if="showPostFlag" :post="post"></item-dialog>
 </template>
 
 <script>
 
+import ItemDialog from './UI/ItemDialog.vue';
+
 export default {
+    data(){
+        return {
+            showPostFlag: false
+        }
+    },
+    components:{
+        ItemDialog
+    },
     props: {
        post: {
          type: Object,
          required: true,
-       } 
-    }
+       }
+    },
+    methods:{
+        showPost(){
+            this.showPostFlag = true
+        }
+    },
 }
 </script>
 
@@ -55,7 +73,7 @@ export default {
 .pricePost{
     border-style: solid;
     border-width: 2px;
-    border-color: var(--green, #38F2AF);;
+    border-color: var(--green, #38F2AF);
     border-radius: 25px;
     text-align: center;
     line-height:  40px;

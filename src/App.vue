@@ -19,12 +19,12 @@
             </ul>
         </nav>
         <div class="sidenav">
-            <a href="#">Status</a>
-            <a href="#">Price</a>
-            <a href="#">Collection</a>
-            <a href="#">Chains</a>
-            <a href="#">Categories</a>
-            <a href="#">Sale</a>
+            <a class="sidenav-btns">Status</a>
+            <a class="sidenav-btns">Price</a>
+            <a class="sidenav-btns">Collection</a>
+            <a class="sidenav-btns">Chains</a>
+            <a class="sidenav-btns">Categories</a>
+            <a class="sidenav-btns">Sale</a>
         </div>
         <h1 class="textLabel">Cryptographics</h1>
         <div class="app__btns">
@@ -123,6 +123,9 @@ export default{
 
 .app{
     font-family: Oswald;
+    font-style: normal;
+    font-weight: 900;
+    line-height: normal;
     margin: 0;
     padding: 0;
 }
