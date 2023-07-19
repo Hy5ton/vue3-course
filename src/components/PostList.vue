@@ -1,13 +1,12 @@
 <template>
     <div v-if="posts.length > 0">
-        <transition-group name="post-list">
+        <!-- мб вернуть анимации добавления-удаления -->
             <post-item 
             v-for:="post in posts"
             :post="post"
             :key="post.id"
             @remove="$emit('remove', post)"
             />
-        </transition-group>
         
     </div>
     <h1 v-else style="color: rgb(101, 189, 101)">

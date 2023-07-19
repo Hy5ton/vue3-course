@@ -1,6 +1,6 @@
 <template>
 <div class="post"
-@click="showPost()">
+    @click="showPost()">
     <div>
         <div class="imagePost"><img :src="post.src"></div>
         <div class="titlePost"><strong> </strong> {{ post.title }}</div>
@@ -16,6 +16,7 @@
     </div>  
 </div>
 <item-dialog @hideDialog="showPostFlag=false" v-if="showPostFlag" :post="post"></item-dialog>
+<!-- проблема тут -->
 </template>
 
 <script>

@@ -1,23 +1,22 @@
 <template>
-    <div class="dialog__item" @click.stop="hideDialog">
-<div @click.stop class="dialog__content__item">
-    <div class="imagePost"><img class="imagePost--style" :src="post.src"></div>
-    <div class="titlePost"><strong> </strong> {{ post.title }}</div>
-    <div class="descriptionPost"><strong> </strong> {{ post.body }}</div>
-    <div class="typePost"><strong></strong> {{ post.type }}</div>
-    <div class="pricePost" >{{ post.price }}</div>
-</div>
+<div class="dialog__item" @click.stop="hideDialog">
+    <div @click.stop class="dialog__content__item">
+        <div class="imagePost"><img class="imagePost--style" :src="post.src"></div>
+        <div class="titlePost"><strong> </strong> {{ post.title }}</div>
+        <div class="descriptionPost"><strong> </strong> {{ post.body }}</div>
+        <div class="typePost"><strong> </strong> {{ post.type }}</div>
+        <div class="pricePost"><strong> </strong> {{ post.price }}</div>
     </div>
+</div>
 </template>
 
 <script>
-
 export default {
     name: 'item-dialog',
     props: {
         post:{
             type: Object,
-            default: null
+            default: null,
         }
     },
     methods: {
@@ -25,9 +24,6 @@ export default {
             this.$emit('hideDialog', false)
         }
     },
-    mounted(){
-        console.log("showDialog")
-    }
 }
 </script>
 

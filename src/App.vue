@@ -2,6 +2,7 @@
     <div class="app">
         <nav class="navbar">
             <ul class="navbar-loc">
+                <img class="mintify--image" src="../src/components/imageNavbar/list.svg"/>
                 <li class="mintify--btns"><a class="mintify--btns--styles">Mintify</a></li>
                 <li class="first--top--btns"><a class="top--btns--styles">Dashboard</a></li>
                 <li class="top--btns"><a class="top--btns--styles">About Us</a></li>
@@ -58,6 +59,7 @@ import PostForm from "@/components/PostForm.vue";
 import PostList from "@/components/PostList.vue";
 import MyButton from "@/components/UI/MyButton.vue";
 import MySelect from "@/components/UI/MySelect.vue";
+import ItemDialog from "@/components/UI/ItemDialog.vue";
 
 export default{
     components: {
@@ -232,17 +234,23 @@ export default{
 }
 .mintify--btns{
     float:left; 
-    margin-right:40px; 
+    margin-right:50px; 
     background-color: #25272E;
 }
 .mintify--btns--styles{
     text-decoration: none;
     font-size: 20px;
-    margin-left: 15px;
+    margin-left: 25px;
     text-decoration:none; 
     display: inline-block; 
     color:var(--green, #38F2AF);;
     background-color: #25272E;
+}
+.mintify--image{
+    display: inline-block;
+    position: absolute; 
+    top: 35px; 
+    left: 5px;  
 }
 .top--btns--styles{
     text-decoration: none;
