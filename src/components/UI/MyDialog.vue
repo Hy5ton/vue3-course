@@ -26,6 +26,7 @@ export default {
 
 <style scoped>
 .dialog {
+    font-family: Oswald;
     position: relative;
     z-index: 9995;
     top: 0;

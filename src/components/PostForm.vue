@@ -1,33 +1,33 @@
 <template>
-    <form @submit.prevent>
+    <form @submit.prevent >
             <h2>Create item</h2>
-            <my-input 
+            <my-input class="new--item"
             v-model="post.title"
             type="text" 
             placeholder="Title item"
             />
-            <my-input 
+            <my-input class="new--item"
             v-model="post.body"
             type="text" 
             placeholder="Description item"
             />
-            <my-input
+            <my-input class="new--item"
             v-model="post.type"
             type="text"
             placeholder="Type item"
             />
-            <my-input
+            <my-input class="new--item"
             v-model="post.price"
             type="text"
             placeholder="Price item"
             />
-            <my-input
+            <my-input class="new--item"
             v-model="post.src"
             type="text"
             placeholder="Link to image"
             />
-            <my-button 
-            style="align-self: flex-end; margin-top: 15px" 
+            <my-button class="crt--btn"
+            style="align-self: flex-end; margin-top: 15px; color: white;" 
             @click="createPost"> 
             Create new item 
             </my-button>
@@ -62,6 +62,7 @@ export default {
 
 <style scoped>
 form{
+    font-family: Oswald;
     position: relative;
     z-index: 9999;
     font-size:20px;
@@ -71,5 +72,11 @@ form{
     display: flex;
     flex-direction: column;
 }
-
+.crt--btn{
+    color:white;
+    cursor: pointer;
+}
+.new--item{
+    font-family: Oswald;
+}
 </style>

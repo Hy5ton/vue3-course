@@ -10,31 +10,37 @@
                 <my-input
                 class="searchLine"
                 v-model="searchQuery"
-                placeholder="🔍Search artwork"
+                placeholder='Search artwork'
                 />
-                <img class="image--navbar" src="../src/components/imageNavbar/email.svg"/>
-                <img class="image--navbar" src="../src/components/imageNavbar/sqrt.svg"/>
-                <img class="image--navbar" src="../src/components/imageNavbar/moneybag.svg"/>
-                <img class="image--navbar" src="../src/components/imageNavbar/bg.png"/>
+                <div class="border-navbar"><img class="image--navbar" src="../src/components/imageNavbar/email.svg"/></div>
+                <div class="border-navbar"><img class="image--navbar" src="../src/components/imageNavbar/sqrt.svg"/></div>
+                <div class="border-navbar"><img class="image--navbar" src="../src/components/imageNavbar/moneybag.svg"/></div>
+                <img class="user--navbar" src="../src/components/imageNavbar/bg.png"/>
                 <a class="username--navbar">Leslie Alexandre</a> 
             </ul>
         </nav>
         <div class="sidenav">
+            <img class="image--arrow-sidebar" src="../src/components/imageNavbar/arrow.svg"/>
             <a class="sidenav-btns">Status</a>
+            <img class="image--arrow-sidebar" src="../src/components/imageNavbar/arrow.svg"/>
             <a class="sidenav-btns">Price</a>
+            <img class="image--arrow-sidebar" src="../src/components/imageNavbar/arrow.svg"/>
             <a class="sidenav-btns">Collection</a>
+            <img class="image--arrow-sidebar" src="../src/components/imageNavbar/arrow.svg"/>
             <a class="sidenav-btns">Chains</a>
+            <img class="image--arrow-sidebar" src="../src/components/imageNavbar/arrow.svg"/>
             <a class="sidenav-btns">Categories</a>
+            <img class="image--arrow-sidebar" src="../src/components/imageNavbar/arrow.svg"/>
             <a class="sidenav-btns">Sale</a>
         </div>
         <h1 class="textLabel">Cryptographics</h1>
         <div class="app__btns">
-            <my-button
+            <button
             class="create__btn"
             @click="showDialog"
             >
                 Create new item
-            </my-button>
+            </button>
             <my-select class="sort--style"
                 v-model="selectedSort"
                 :options="sortOptions"
@@ -48,13 +54,13 @@
         <div>
             <post-list class="elements"
                 :posts="sortedAndSearchedPosts"
-                @remove="removePost"
             />
         </div>
     </div>
 </template>
 
 <script>
+// @remove="removePost" под :posts - кнопка удаления айтема
 import PostForm from "@/components/PostForm.vue";
 import PostList from "@/components/PostList.vue";
 import MyButton from "@/components/UI/MyButton.vue";
@@ -132,8 +138,7 @@ export default{
     padding: 0;
 }
 .app__btns{
-    display: flex;
-    justify-content: right;
+    cursor: pointer;
     margin: 50px 1480px;
     height: 150px;
     width: 350px;
@@ -142,44 +147,76 @@ export default{
     font-size: 20px;
 }
 .create__btn{
+    cursor: pointer;
+    position: relative;
     padding: 10px 15px;
     border-radius: 15px;
+    top: 70px;
+    left: 175px;
+    display: flex;
+    align-items: center;
     color: black;
     border: 1px solid #383940;
-    background: var(--green, #38F2AF);;
-    margin-top: 80px;
+    background: var(--green, #38F2AF);
     font-size:25px;
-    font-weight: 700;
+    font-weight: 500;
     font-family: Oswald;
 }
 .textLabel{
     position: absolute; 
-    font-size: 50px;
+    font-size: 32px;
     top: 130px; 
     left: 300px; 
     color: white;
 }
 .searchLine{
+    font-family: 'FontAwesome';
     position: relative;
+    font-family: Oswald;
+    padding-left: 25px;
     max-width: 420px;
-    background: #373943;
     color: white;
-    left: 330px;
+    left: 190px;
     border-radius: 10px;
-    top: -25px;
+    top: -20px;
 }
 .image--navbar{
+    cursor: pointer;
+    width: 22px;
+    background: #373943;
+    border-radius: 25px;
+    left: 9px;
+    top: 9px;
+    position: relative;
+    color: white;
+    margin-right: 20px;
+}
+.border-navbar{
+    cursor: pointer;
+    margin-right: 20px;
+    border-radius: 25px;
+    background: #373943;
+    display:inline-block;
+    position: relative;
+    left: 330px;
+    top: -25px;
+    height: 40px; 
+    width: 40px; 
+}
+.user--navbar{
+    cursor: pointer;
+    height: 40px; 
+    width: 40px;
+    left: 360px;
+    top: -7px;
     background: #373943;
     border-radius: 25px;
     position: relative;
     color: white;
-    left: 380px;
-    top: -10px;
-    height: 40px; 
-    width: 40px; 
     margin-right: 20px;
 }
 .username--navbar{
+    cursor: pointer;
     font-family: Oswald;
     font-size: 22px;
     background: #25272E;
@@ -203,6 +240,7 @@ export default{
     margin: 0;
     color: #25272E;
     background-color: #25272E;
+    flex-wrap: nowrap;
 }
 .navbar-loc{
     list-style: none; 
@@ -213,9 +251,10 @@ export default{
     background-color: #25272E;
 }
 .first--top--btns{
+    cursor: pointer;
     float:left; 
     margin-right:40px; 
-    padding-left: 160px;
+    padding-left: 140px;
     background-color: #25272E;
 }
 .first--top--btns--styles{
@@ -228,13 +267,16 @@ export default{
     background-color: #25272E;
 }
 .top--btns{
+    cursor: pointer;
     float:left; 
     margin-right:40px; 
     background-color: #25272E;
 }
 .mintify--btns{
+    cursor: pointer;
     float:left; 
-    margin-right:50px; 
+    margin-right:50px;
+    padding-left: 25px; 
     background-color: #25272E;
 }
 .mintify--btns--styles{
@@ -250,7 +292,7 @@ export default{
     display: inline-block;
     position: absolute; 
     top: 35px; 
-    left: 5px;  
+    left: 30px;  
 }
 .top--btns--styles{
     text-decoration: none;
@@ -288,11 +330,13 @@ export default{
     left: 0;
     background-color: #25272E; 
     overflow-x: hidden; 
-    padding-top: 72px;
+    padding-top: 121px;
 }
 .sidenav a {
-    padding: 6px 8px 6px 16px;
-    width: 220px;
+    cursor: pointer;
+    top: -58px;
+    padding: 6px 8px 10px 0px;
+    width: 160px;
     text-decoration: none;
     font-size: 20px;
     color: white;
@@ -308,6 +352,14 @@ export default{
 .sidenav a:hover {
     color: var(--green, #38F2AF);
 }
+.image--arrow-sidebar{
+    cursor: pointer;
+    background: #25272E;
+    position: relative;
+    left: 170px;
+    top: -22px;
+    z-index: 9999;
+}
 .main {
     margin-left: 160px; 
     padding: 0px 10px;
@@ -315,6 +367,10 @@ export default{
 @media screen and (max-height: 450px) {
     .sidenav {padding-top: 15px;}
     .sidenav a {font-size: 18px;}
+}
+.sidenav-btns{
+    position:relative;
+    left: 30px;
 }
 .elements{
     font-size:20px;

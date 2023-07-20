@@ -16,7 +16,6 @@
     </div>  
 </div>
 <item-dialog @hideDialog="showPostFlag=false" v-if="showPostFlag" :post="post"></item-dialog>
-<!-- проблема тут -->
 </template>
 
 <script>
@@ -72,26 +71,33 @@ export default {
     margin-bottom: 10px;
 }
 .pricePost{
+    cursor: pointer;
     border-style: solid;
     border-width: 2px;
     border-color: var(--green, #38F2AF);
     border-radius: 25px;
+    justify-content: center; 
     text-align: center;
-    line-height:  40px;
+    align-items: center;
     width: 132px;
-    height: 40px;
+    height: auto;
     margin-bottom: 20px;
     position: relative;
     z-index: 1;
     left: 190px;
-    top: 120px;
+    top: 100px;
+    margin: 0;
+    padding-top: 2px;
+    padding-bottom: 4px;
 }
 .post_btns{
-    width: 132px;
-    height: 40px;
-    margin-top: 70px;
+    position: relative;
+    text-align: left;
+    height: 15px;
+    margin-top: 65px;
 }
 .type--delete--btns--style{
+    width: 150px;
     color:var(--green, #38F2AF);;
 }
 </style>

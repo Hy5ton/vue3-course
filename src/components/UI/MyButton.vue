@@ -13,9 +13,12 @@ export default {
 
 <style scoped>
 .btn{
-    border: 1px solid #373943;
-    width: 182px;
-    height: 60px;
+    font-family: Oswald;
+    border: 0px solid #272A34;
+    margin: 0;
+    padding: 0;
+    height: 20px;
+    width: auto;
     font-size: 20px;
 }
 </style>

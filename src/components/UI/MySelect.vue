@@ -33,8 +33,10 @@ export default {
 
 <style scoped>
 .my--select{
+    font-family: Oswald;
     color: var(--green, #38F2AF);
     border-radius: 10px;
+    border: #373943;
     position: absolute; 
     top: 220px;  
     left: 300px;

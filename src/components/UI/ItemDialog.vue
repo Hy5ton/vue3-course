@@ -67,6 +67,7 @@ export default {
     color: #38F2AF;
 }
 .pricePost{
+    cursor: pointer;
     border-style: solid;
     border-width: 2px;
     border-color: var(--green, #38F2AF);
