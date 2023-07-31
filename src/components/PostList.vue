@@ -9,7 +9,7 @@
             />
         
     </div>
-    <h1 v-else style="color: rgb(101, 189, 101)">
+    <h1 v-else style="color: rgb(101, 189, 101); background-color: #2B2C33; font-size: 50px; margin-left: 300px; margin-top: 150px;">
         Items empty
     </h1>
 </template>

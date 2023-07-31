@@ -8,9 +8,9 @@
                 <li class="top--btns"><a class="top--btns--styles">About Us</a></li>
                 <li class="top--btns"><a class="top--btns--styles">FAQ</a></li>
                 <my-input
-                class="searchLine"
+                class="material-symbols-outlined"
                 v-model="searchQuery"
-                placeholder='Search artwork'
+                placeholder='Search'
                 />
                 <div class="border-navbar"><img class="image--navbar" src="../src/components/imageNavbar/email.svg"/></div>
                 <div class="border-navbar"><img class="image--navbar" src="../src/components/imageNavbar/sqrt.svg"/></div>
@@ -128,7 +128,21 @@ export default{
     padding: 0;
     box-sizing: border-box;
 }
-
+.material-symbols-outlined {
+    font-size: 20px;
+    position: relative;
+    padding-left: 25px;
+    max-width: 420px;
+    color: white;
+    left: 190px;
+    border-radius: 10px;
+    top: -20px;
+    font-variation-settings:
+    'FILL' 0,
+    'wght' 100,
+    'GRAD' 0,
+    'opsz' 48
+}
 .app{
     font-family: Oswald;
     font-style: normal;
@@ -170,7 +184,6 @@ export default{
     color: white;
 }
 .searchLine{
-    font-family: 'FontAwesome';
     position: relative;
     font-family: Oswald;
     padding-left: 25px;
@@ -180,6 +193,7 @@ export default{
     border-radius: 10px;
     top: -20px;
 }
+
 .image--navbar{
     cursor: pointer;
     width: 22px;
