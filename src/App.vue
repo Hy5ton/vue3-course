@@ -2,21 +2,19 @@
     <div class="app">
         <nav class="navbar">
             <ul class="navbar-loc">
-                <img class="mintify--image" src="../src/components/imageNavbar/list.svg"/>
-                <li class="mintify--btns"><a class="mintify--btns--styles">Mintify</a></li>
+                <li class="mintify--btns"><img class="mintify--image" src="../src/components/imageNavbar/list.svg"/><a class="mintify--btns--styles">Mintify</a></li>
                 <li class="first--top--btns"><a class="top--btns--styles">Dashboard</a></li>
                 <li class="top--btns"><a class="top--btns--styles">About Us</a></li>
                 <li class="top--btns"><a class="top--btns--styles">FAQ</a></li>
-                <my-input
+                <input
                 class="material-symbols-outlined"
                 v-model="searchQuery"
                 placeholder='Search'
                 />
-                <div class="border-navbar"><img class="image--navbar" src="../src/components/imageNavbar/email.svg"/></div>
-                <div class="border-navbar"><img class="image--navbar" src="../src/components/imageNavbar/sqrt.svg"/></div>
-                <div class="border-navbar"><img class="image--navbar" src="../src/components/imageNavbar/moneybag.svg"/></div>
-                <img class="user--navbar" src="../src/components/imageNavbar/bg.png"/>
-                <a class="username--navbar">Leslie Alexandre</a> 
+                <div class="border-navbar"><img class="image--navbar" src="../src/components/imageNavbar/email.svg"/>
+                <img class="image--navbar" src="../src/components/imageNavbar/sqrt.svg"/>
+                <img class="image--navbar" src="../src/components/imageNavbar/moneybag.svg"/></div>
+                <a class="username--navbar"><img class="user--navbar" src="../src/components/imageNavbar/bg.png"/>Leslie Alexandre</a> 
             </ul>
         </nav>
         <div class="sidenav">
@@ -129,19 +127,19 @@ export default{
     box-sizing: border-box;
 }
 .material-symbols-outlined {
+    height: 33px;
     font-size: 20px;
-    position: relative;
-    padding-left: 25px;
     max-width: 420px;
     color: white;
-    left: 190px;
+    /* left: 190px; */
     border-radius: 10px;
-    top: -20px;
+    border: 1px solid #383940;
+    /* top: -20px; */
     font-variation-settings:
     'FILL' 0,
-    'wght' 100,
+    'wght' 0,
     'GRAD' 0,
-    'opsz' 48
+    'opsz' 0
 }
 .app{
     font-family: Oswald;
@@ -159,16 +157,15 @@ export default{
 }
 .sort--style{
     font-size: 20px;
+    top: 150px;
 }
 .create__btn{
     cursor: pointer;
     position: relative;
     padding: 10px 15px;
     border-radius: 15px;
-    top: 70px;
+    top: 60px;
     left: 175px;
-    display: flex;
-    align-items: center;
     color: black;
     border: 1px solid #383940;
     background: var(--green, #38F2AF);
@@ -178,103 +175,74 @@ export default{
 }
 .textLabel{
     position: absolute; 
-    font-size: 32px;
-    top: 130px; 
-    left: 300px; 
+    font-size: 32px;    
     color: white;
 }
 .searchLine{
-    position: relative;
+    flex-shrink: 2;
     font-family: Oswald;
-    padding-left: 25px;
     max-width: 420px;
     color: white;
-    left: 190px;
     border-radius: 10px;
-    top: -20px;
 }
 
 .image--navbar{
     cursor: pointer;
-    width: 22px;
+    width: 30px;
     background: #373943;
     border-radius: 25px;
-    left: 9px;
-    top: 9px;
     position: relative;
     color: white;
-    margin-right: 20px;
 }
 .border-navbar{
+    min-width: 100px;
     cursor: pointer;
-    margin-right: 20px;
     border-radius: 25px;
-    background: #373943;
-    display:inline-block;
-    position: relative;
-    left: 330px;
-    top: -25px;
-    height: 40px; 
-    width: 40px; 
+    background: #25272E;
+    width: 30px; 
+    height: 30px;
 }
 .user--navbar{
+    height: 33px;
     cursor: pointer;
-    height: 40px; 
-    width: 40px;
-    left: 360px;
-    top: -7px;
     background: #373943;
     border-radius: 25px;
-    position: relative;
     color: white;
-    margin-right: 20px;
+    margin-right: 10px;
+    align-items: center;
 }
 .username--navbar{
+    display: flex;
+    align-items: center;
+    flex-shrink: 0;
+    height: 33px;
+    width: 200px;
     cursor: pointer;
-    font-family: Oswald;
     font-size: 22px;
     background: #25272E;
-    position: relative;
     color: white;
-    left: 370px;
-    top: -20px;
-    height: 40px; 
-    width: 100px; 
-    margin-right: 20px;
 }
-.navbar{
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    z-index: 5;
+.navbar-loc{
+    height: 90px;
+    align-items: center;
     border-style: solid;
     border-width: 1px;
     border-color: #383940;
-    margin: 0;
-    color: #25272E;
-    background-color: #25272E;
-    flex-wrap: nowrap;
-}
-.navbar-loc{
-    list-style: none; 
-    margin: 0; 
-    padding-left: 0; 
-    margin-top:25px; 
+    display: flex;
+    flex-wrap: no-wrap;
+    justify-content: space-around;
+    /* margin-top:25px;  */
     color: #25272E;
     background-color: #25272E;
 }
 .first--top--btns{
     cursor: pointer;
     float:left; 
-    margin-right:40px; 
-    padding-left: 140px;
     background-color: #25272E;
 }
 .first--top--btns--styles{
     text-decoration: none;
     font-size: 20px;
-    margin-left: 30px;
     text-decoration:none; 
     display: inline-block; 
     color:white;
@@ -283,30 +251,25 @@ export default{
 .top--btns{
     cursor: pointer;
     float:left; 
-    margin-right:40px; 
     background-color: #25272E;
 }
 .mintify--btns{
     cursor: pointer;
-    float:left; 
-    margin-right:50px;
-    padding-left: 25px; 
     background-color: #25272E;
 }
 .mintify--btns--styles{
+    height: 33px;
     text-decoration: none;
     font-size: 20px;
-    margin-left: 25px;
     text-decoration:none; 
     display: inline-block; 
     color:var(--green, #38F2AF);;
     background-color: #25272E;
 }
 .mintify--image{
-    display: inline-block;
-    position: absolute; 
-    top: 35px; 
-    left: 30px;  
+    height: 16px; 
+    width: 20px;
+    background-color:#25272E;
 }
 .top--btns--styles{
     text-decoration: none;
@@ -392,7 +355,7 @@ export default{
     border-radius: 15px;
     background: #373943;
     margin: 50px 290px;
-    margin-top: 120px;
+    margin-top: 80px;
     width: 1545px;
 }
 </style>
