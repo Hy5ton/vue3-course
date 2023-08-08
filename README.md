@@ -18,6 +18,7 @@ npm run build
 ### Customize configuration
 See [Configuration Reference](https://cli.vuejs.org/config/).
 ### Внешний вид админ-панели в маркетплейсе
-![image](https://github.com/Hy5ton/vue3-course/assets/136145099/5e5af83f-46e4-453f-9ddc-1f07c84af259)
+![image](https://github.com/Hy5ton/vue3-course/assets/136145099/2c42fea9-6144-49e0-9e48-7dcca7d4e4cb)
+
 
 
